@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    color: aliceblue;
+}
+html:focus-within {
+    scroll-behavior: smooth;
+  }
+body{
+    background: hsl(257, 40%, 49%) url(./images/bg-desktop.svg)  no-repeat;
+}
+main{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "sec1 sec2";
+  grid-gap: 0.2rem;
+}
+.di{
+  margin: auto 40px auto 50px;
+  grid-area: sec1;
+}
+.section1_cotent{
+  margin-left: auto;
+  margin-right: auto;
+}
+.logo{
+    width: 150px;
+}
+.img1{
+  margin-top: 30px;
+  max-width: 550px;
+}
+.section2{
+  grid-area: sec2;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 100px 30px 0px 0px;
+}
+.section2_content{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+h3{
+  margin: 0px auto 25px 0px;
+  font-weight: 600;
+  font-family: 'Open Sans', Courier, monospace;
+}
+p{
+  font-family: 'Poppins', Courier, monospace;
+  font-weight: 400;
+  line-height: 20px;
+  font-size: medium;
+  margin-bottom: auto;
+}
+button{
+  background-color: white;
+  color: hsl(257, 40%, 49%);
+  padding: 10px 50px;
+  margin: 30px  0px auto 0px;
+  border-radius: 30px;
+  font-family: 'Poppins', Courier, monospace;
+  border: none;
+}
+button:hover,button:focus{
+  background-color: hsl(300, 69%, 71%);
+  color: aliceblue;
+  cursor: pointer;
+}
+.ionicon{
+  width: 40px;
+  fill: white;
+  stroke: white;
+  border:green;
+  border-radius: 50% ;
+  padding: 10px;
+}
+.ionicon:hover,.ionicon:focus{
+  fill: hsl(300, 69%, 71%);
+  cursor: pointer;
+}
+.social_icons{
+  display: flex;
+  margin: auto 50px 50px auto;
+}
+@media only screen and (max-width:376px){
+  body{
+    background-image: url(./images/bg-mobile.svg);
+  }
+  
+}
+@media only screen and (max-width:550px){
+  main{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2fr 0.8fr;
+    grid-template-areas: 
+    "sec1"
+    "sec2";
+  }
+  .section2{
+    align-items: center;
+    text-align: center;
+    margin:10px 30px 10px 30px;
+  }
+  .img1{
+    margin-top: 30px;
+    max-width: 300px;
+  }
+  .di{
+    margin: 30px auto auto auto ;
+  }
+  .social_icons{
+    margin:0px auto ;
+  }
+  .section2_content{
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width:768px){
+  .img1{
+    min-width:450px ;
+  }
+}
